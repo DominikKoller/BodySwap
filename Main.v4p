@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="D:\GIT\BodySwap\Main.v4p" scrollx="5580" scrolly="-90" systemname="Main" filename="C:\Users\dom\Desktop\MerlinKinect\Main.v4p">
-   <BOUNDS type="Window" left="12210" top="255" width="18495" height="13245">
+   <PATCH nodename="D:\_GIT\bodyswap-dk\Main.v4p" scrollx="1575" scrolly="0" systemname="Main" filename="C:\Users\dom\Desktop\MerlinKinect\Main.v4p">
+   <BOUNDS type="Window" left="7110" top="630" width="18495" height="13245">
    </BOUNDS>
    <NODE systemname="Kinect2 (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\kinect2\VVVV.DX11.Nodes.Kinect2.dll" nodename="Kinect2 (Devices Microsoft)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3270" top="2265" width="100" height="100">
@@ -71,11 +71,11 @@
    <LINK srcnodeid="0" srcpinname="Kinect Runtime" dstnodeid="5" dstpinname="Kinect Runtime">
    </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="8">
-   <BOUNDS type="Node" left="2700" top="11700" width="100" height="100">
+   <BOUNDS type="Node" left="2760" top="13590" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2700" top="11700" width="6000" height="4500">
+   <BOUNDS type="Box" left="2760" top="13590" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="11130" height="11490">
+   <BOUNDS type="Window" left="195" top="150" width="7200" height="5310">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -105,15 +105,15 @@
    </PIN>
    </NODE>
    <NODE nodename="Group (DX11.Layer)" id="19" systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll">
-   <BOUNDS type="Node" left="2865" top="11265" width="0" height="0">
+   <BOUNDS type="Node" left="2655" top="12225" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="2865" top="11265" width="2400" height="1800">
+   <BOUNDS type="Box" left="2655" top="12225" width="2400" height="1800">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="6">
+   <PIN pinname="Input Count" slicecount="1" values="10">
    </PIN>
    <PIN pinname="Layer 3" visible="1">
    </PIN>
@@ -123,11 +123,19 @@
    </PIN>
    <PIN pinname="Layer 6" visible="1">
    </PIN>
+   <PIN pinname="Layer 7" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 8" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 9" visible="1">
+   </PIN>
+   <PIN pinname="Layer 10" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Layer Out" dstnodeid="8" dstpinname="Layers">
    </LINK>
    <NODE systemname="Line (DX11)" filename="%VVVV%\packs\dx11\nodes\modules\Line (DX11).v4p" nodename="Line (DX11)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="3735" top="9345" width="100" height="100">
+   <BOUNDS type="Node" left="2745" top="9600" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -247,7 +255,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13725" top="1245" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="KinectTwoPeople.xef">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\KinectTwoPeople.xef">
    </PIN>
    <PIN pinname="Default" slicecount="1" values=".xef">
    </PIN>
@@ -293,7 +301,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12165" top="2385" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -303,14 +311,12 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Pause">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="9" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 3">
    </LINK>
@@ -327,7 +333,7 @@
    <LINK srcnodeid="0" srcpinname="Kinect Runtime" dstnodeid="71" dstpinname="Kinect Runtime">
    </LINK>
    <NODE systemname="Camera (Transform 2d)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.55.43-g436959e253\vvvv\nodes\modules\Camera (Transform 2d).v4p" nodename="Camera (Transform 2d)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="4455" top="11295" width="100" height="100">
+   <BOUNDS type="Node" left="3600" top="13140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -349,8 +355,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="71" srcpinname="Texture" dstnodeid="76" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="76" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="77">
    <BOUNDS type="Node" left="135" top="9270" width="100" height="100">
@@ -635,9 +639,9 @@
    </PIN>
    </NODE>
    <NODE id="114" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="7410" top="4155" width="795" height="240">
+   <BOUNDS type="Box" left="7785" top="3705" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7410" top="4155" width="0" height="0">
+   <BOUNDS type="Node" left="7785" top="3705" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="1">
    </PIN>
@@ -771,9 +775,9 @@
    </BOUNDS>
    <BOUNDS type="Window" left="13665" top="3060" width="9705" height="7545">
    </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="120" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 4">
-   </LINK>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="120" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="120" srcpinname="From" dstnodeid="21" dstpinname="From">
@@ -785,9 +789,9 @@
    <LINK srcnodeid="0" srcpinname="Kinect Runtime" dstnodeid="120" dstpinname="Kinect Runtime">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="122">
-   <BOUNDS type="Box" left="8490" top="5520" width="2835" height="6525">
+   <BOUNDS type="Box" left="9735" top="300" width="3240" height="975">
    </BOUNDS>
-   <BOUNDS type="Node" left="8490" top="5520" width="0" height="0">
+   <BOUNDS type="Node" left="9735" top="300" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -865,7 +869,7 @@
    <LINK srcnodeid="126" srcpinname="Y Output Value" dstnodeid="125" dstpinname="Index">
    </LINK>
    <NODE systemname="Cursor (DX11)" filename="%VVVV%\packs\dx11\nodes\modules\Cursor (DX11).v4p" nodename="Cursor (DX11)" componentmode="Hidden" id="127">
-   <BOUNDS type="Node" left="4335" top="10800" width="100" height="100">
+   <BOUNDS type="Node" left="5310" top="10740" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -875,9 +879,9 @@
    <LINK srcnodeid="127" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 6">
    </LINK>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="128">
-   <BOUNDS type="Node" left="4335" top="10290" width="100" height="100">
+   <BOUNDS type="Node" left="5160" top="9255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4335" top="10290" width="3000" height="3000">
+   <BOUNDS type="Box" left="5160" top="9255" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Device" visible="1">
    </PIN>
@@ -885,5 +889,323 @@
    <LINK srcnodeid="128" srcpinname="Device" dstnodeid="127" dstpinname="Mouse">
    </LINK>
    <LINK srcnodeid="36" srcpinname="Output String" dstnodeid="30" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="myarea" filename="myarea.v4p" nodename="myarea.v4p" componentmode="Hidden" id="130">
+   <BOUNDS type="Node" left="690" top="4635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Skeleton XY" visible="1">
+   </PIN>
+   <PIN pinname="Area Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="7245" top="1710" width="10425" height="9285">
+   </BOUNDS>
+   <PIN pinname="AreaOut9" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="111" srcpinname="Output" dstnodeid="130" dstpinname="Skeleton XY">
+   </LINK>
+   <NODE systemname="Area (2d)" filename="%VVVV%\lib\nodes\modules\2D\Area (2d).v4p" nodename="Area (2d)" componentmode="Hidden" id="134">
+   <BOUNDS type="Node" left="975" top="2880" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Area Out" dstnodeid="19" dstpinname="Layer 7">
+   </LINK>
+   <NODE systemname="myarea" filename="myarea.v4p" nodename="myarea.v4p" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="6060" top="5235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Skeleton XY" visible="1" slicecount="8" values="0.716378246380552,0.286378246380552,0.143621753619448,0.286378246380552,0.143621753619448,-0.286378246380552,0.716378246380552,-0.286378246380552">
+   </PIN>
+   <PIN pinname="Area Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="7245" top="1710" width="10425" height="9285">
+   </BOUNDS>
+   <PIN pinname="AreaOut9" visible="1">
+   </PIN>
+   <PIN pinname="Area total" visible="1">
+   </PIN>
+   <PIN pinname="ColorSwitch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="136" dstpinname="Skeleton XY">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="AreaCheck" filename="..\bodyswap\AreaCheck.v4p" nodename="..\bodyswap\AreaCheck.v4p" componentmode="Hidden" id="137">
+   <BOUNDS type="Node" left="6210" top="6105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Area Input" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="2085" top="8430" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="BigAreaTrigger" visible="1">
+   </PIN>
+   <PIN pinname="LoopReset" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="137" srcpinname="BigAreaTrigger" dstnodeid="136" dstpinname="ColorSwitch" linkstyle="Bezier">
+   <LINKPOINT x="8930" y="4245">
+   </LINKPOINT>
+   <LINKPOINT x="6715" y="4185">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="139">
+   <BOUNDS type="Box" left="7470" top="5070" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7470" top="5070" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="139" srcpinname="Y Output Value" dstnodeid="137" dstpinname="LoopReset">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="141">
+   <BOUNDS type="Node" left="8370" top="4920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="141" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142">
+   <BOUNDS type="Box" left="8535" top="4380" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8535" top="4380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="28">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="142" srcpinname="Y Output Value" dstnodeid="141" dstpinname="Bin Size">
+   </LINK>
+   <NODE systemname="HSV (Color Join Picker)" filename="%VVVV%\lib\nodes\modules\Color\HSV (Color Join Picker).v4p" nodename="HSV (Color Join Picker)" componentmode="Hidden" id="148">
+   <BOUNDS type="Node" left="11400" top="6555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="67">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" values="202">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="149">
+   <BOUNDS type="Box" left="11415" top="6825" width="405" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11415" top="6825" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="149" dstpinname="Color Input">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="153">
+   <BOUNDS type="Node" left="8025" top="7290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="153" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="154">
+   <BOUNDS type="Box" left="8265" top="6960" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8265" top="6960" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="154" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Bin Size">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="155">
+   <BOUNDS type="Box" left="8775" top="7200" width="570" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8775" top="7200" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Index">
+   </LINK>
+   <NODE systemname="HSV (Color Join Picker)" filename="%VVVV%\lib\nodes\modules\Color\HSV (Color Join Picker).v4p" nodename="HSV (Color Join Picker)" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="10185" top="7785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="67">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" values="278">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="162">
+   <BOUNDS type="Box" left="10200" top="8055" width="300" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10200" top="8055" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="162" dstpinname="Color Input">
+   </LINK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="164">
+   <BOUNDS type="Node" left="6885" top="8355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="myarea" filename="myarea.v4p" nodename="myarea.v4p" componentmode="Hidden" id="165">
+   <BOUNDS type="Node" left="7110" top="7875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Skeleton XY" visible="1" slicecount="8" values="0.716378246380552,0.286378246380552,0.143621753619448,0.286378246380552,0.143621753619448,-0.286378246380552,0.716378246380552,-0.286378246380552">
+   </PIN>
+   <PIN pinname="Area Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="7245" top="1710" width="10425" height="9285">
+   </BOUNDS>
+   <PIN pinname="AreaOut9" visible="1">
+   </PIN>
+   <PIN pinname="Area total" visible="1">
+   </PIN>
+   <PIN pinname="ColorSwitch" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="165" dstpinname="Skeleton XY">
+   </LINK>
+   <NODE systemname="myarea" filename="myarea.v4p" nodename="myarea.v4p" componentmode="Hidden" id="166">
+   <BOUNDS type="Node" left="6165" top="7860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Skeleton XY" visible="1" slicecount="8" values="0.716378246380552,0.286378246380552,0.143621753619448,0.286378246380552,0.143621753619448,-0.286378246380552,0.716378246380552,-0.286378246380552">
+   </PIN>
+   <PIN pinname="Area Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="7245" top="1710" width="10425" height="9285">
+   </BOUNDS>
+   <PIN pinname="AreaOut9" visible="1">
+   </PIN>
+   <PIN pinname="Area total" visible="1">
+   </PIN>
+   <PIN pinname="ColorSwitch" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="166" dstpinname="Skeleton XY">
+   </LINK>
+   <LINK srcnodeid="166" srcpinname="Area total" dstnodeid="164" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="165" srcpinname="Area total" dstnodeid="164" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Output" dstnodeid="137" dstpinname="Area Input" linkstyle="Bezier">
+   <LINKPOINT x="6300" y="9130">
+   </LINKPOINT>
+   <LINKPOINT x="4800" y="7985">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="BoundsHelperQuad" filename="BoundsHelperQuad.v4p" nodename="BoundsHelperQuad.v4p" componentmode="Hidden" id="167">
+   <BOUNDS type="Node" left="9737" top="6870" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7767" top="4458" width="3940" height="4825">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10710" top="6915" width="3930" height="4815">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="167" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="167" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="167" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="BoundsHelperQuad" filename="BoundsHelperQuad.v4p" nodename="BoundsHelperQuad.v4p" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="8642" top="8445" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6672" top="6033" width="3940" height="4825">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10710" top="6915" width="3930" height="4815">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="168" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="168" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 9">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="168" dstpinname="Color">
+   </LINK>
+   <NODE systemname="BoundsHelperQuad" filename="BoundsHelperQuad.v4p" nodename="BoundsHelperQuad.v4p" componentmode="Hidden" id="169">
+   <BOUNDS type="Node" left="6707" top="10725" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4737" top="8313" width="3940" height="4825">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10710" top="6915" width="3930" height="4815">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="169" srcpinname="Layer" dstnodeid="19" dstpinname="Layer 10">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="169" dstpinname="Input">
+   </LINK>
+   <NODE systemname="HelperColorSwitch" filename="HelperColorSwitch.v4p" nodename="HelperColorSwitch.v4p" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="8424" top="10122" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5112" top="7852" width="6625" height="4540">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10110" top="6465" width="6840" height="6570">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="137" srcpinname="BigAreaTrigger" dstnodeid="176" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="169" dstpinname="Color">
    </LINK>
    </PATCH>
